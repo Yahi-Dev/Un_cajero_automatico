@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+@if (@ViewBag.ErrorMessage != null)
+{
+    <div class="alert alert-danger text-center col-4 mx-auto" role="alert" style="margin-top: 40px;">
+    @ViewBag.ErrorMessage
+    </div>
+    <ul class="nav justify-content-center mx-auto" md-3 style="margin-top: 70px;">
+        <li class="nav-item">
+            <a class="nav-link active disabled" aria-current="page" href="#"><button type="button" class="btn btn-outline-secondary" disabled>Depositar</button></a>
+        </li>
+        <li class="nav-item ">
+            <a class="nav-link-dark" asp-area="" asp-controller="Application" asp-action="Index1"><button type="submit" class="btn btn-outline-info">Retirar</button></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active disabled" aria-current="page" href="#"><button type="button" class="btn btn-outline-secondary" disabled>Ver Saldo</button></a>
+        </li>
+    </ul>
+}
+else
+{
+    <ul class="nav justify-content-center mx-auto" md-3 style="margin-top: 70px;">
+        <li class="nav-item">
+            <a class="nav-link active disabled" aria-current="page" href="#"><button type="button" class="btn btn-outline-secondary" disabled>Depositar</button></a>
+        </li>
+        <li class="nav-item ">
+            <a class="nav-link-dark" asp-area="" asp-controller="Application" asp-action="Index1"><button type="submit" class="btn btn-outline-info">Retirar</button></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active disabled" aria-current="page" href="#"><button type="button" class="btn btn-outline-secondary" disabled>Ver Saldo</button></a>
+        </li>
+    </ul>
+}

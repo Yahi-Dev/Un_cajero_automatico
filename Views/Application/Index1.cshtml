@@ -1,0 +1,36 @@
+﻿@model Tarea1_Leonardo.Models.DispensacionModels;
+
+@{
+    ViewData["Title"] = "Index1";
+}
+
+<form method="post" asp-action="Index1" asp-controller="Application">
+<main class="container-fluid mt-5">
+    <div class="row">
+        <div class="col-12 col-sm-6 offset-sm3 col-md-4 offset-md-4">
+            <div class="card">
+                <div class="card-header bg-primary text-light">
+                    <h5 class="text-center">Modo de Dispensación</h5>
+                </div>
+
+
+                <div class="card-body">
+                    <h5 class="card-title text-center fa-">Modo de Dispensacion del Banco YAMENT</h5>
+                    <div class="mb-3" style="margin-top: 40px">
+                            <label class="form-label" asp-for="TipoDeDispensacion" for="TipoDeDispensacion" id="TipoDeDispensacion">Elija su modo de dispensacion</label>
+                            <select class="form-select" asp-for="TipoDeDispensacion" id="TipoDeDispensacion" name="TipoDeDispensacion">
+                                <option value=1>Modo de Dispensacion Eficiente</option>
+                                <option value=2>Retirar de 200 y 1000</option>
+                                <option value=3>Retirar de 100 y 500</option>
+                            </select>
+
+                    </div>
+
+
+                    <button type="submit" class="btn btn-outline-primary float-end">Ir a retirar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</form>

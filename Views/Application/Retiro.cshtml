@@ -1,0 +1,41 @@
+﻿@model Tarea1_Leonardo.Models.DispensacionModels
+
+@{
+    ViewData["Title"] = "Retiro";
+}
+
+
+
+<form method="post" asp-action="Retiro" asp-controller="Application">
+    <main class="container-fluid mt-5">
+        <div class="row">
+            <div class="col-12 col-sm-6 offset-sm3 col-md-4 offset-md-4">
+                <div class="card">
+                    <div class="card-header bg-primary text-light">
+                        <h5 class="text-center">Retiro</h5>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Banco YAMENT <img src="~/Image/money-cheque-editar.png" width="25" height="25" /></h5>
+
+                        <h6 class="card-title text-center"> Digite el monto a depositar</h6>
+                        <div class="input-group mb-3" style="margin-top: 40px;">
+                            <span class="input-group-text">$</span>
+                            <input type="number" class="form-control" name="monto" aria-label="Amount (to the nearest dollar)">
+                            <span class="input-group-text">.00</span>
+                        </div>
+
+                        <div style="margin-top: 25px;">
+                            <h6>Modo de Dispensación selecionado</h6>
+                            <div class="list-group">
+                                <a href="/Application/Index1" class="list-group-item list-group-item-action list-group-item-success text-center">@ViewBag.Retiro</a>
+                            </div>
+                        </div>
+                        <br/>
+                        <a href="/Application/Index1" class="btn btn-outline-danger">Atras</a>
+                        <button type="submit" class="btn btn-outline-success float-end">Retirar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</form>
